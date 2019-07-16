@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/offwhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/themeColor" android:gravity="right" android:layout_gravity="right" android:id="@id/tv_skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.1">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+                <ImageView android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/splashscreen2" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/splashscreen" android:textColor="@color/float_button" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Get rewarded for your" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/splashscreen" android:textColor="@color/float_button" android:gravity="center" android:id="@id/openSansSemiBold" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="an eco-friendly initiation" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.8">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.5">
+                <ImageView android:layout_width="fill_parent" android:layout_height="100.0dip" android:src="@drawable/splash3" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+                <TextView.OpenSansItalic android:textSize="@dimen/Font_medium_size" android:gravity="center" android:id="@id/openSansRegular3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Exciting Voucher deals are available. " />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="4.0dip" android:src="@drawable/dotcircle_welcome" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="4.0dip" android:src="@drawable/dotcircle_welcome" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="4.0dip" android:src="@drawable/dotcircle_welcome" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="4.0dip" android:src="@drawable/selectdot_welcome" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

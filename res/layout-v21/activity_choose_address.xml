@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_choose_address" android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_size" android:contentInsetStart="0.0dip" android:contentInsetEnd="0.0dip" android:contentInsetLeft="0.0dip" android:contentInsetRight="0.0dip" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/img_back" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Choose Delivery Type" android:textAlignment="center" />
+                </LinearLayout>
+                <ImageView android:layout_width="45.0dip" android:layout_height="45.0dip" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/chooseaddress_ll_pick" android:background="@drawable/pick_drop_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="7.0dip" android:layout_weight="1.0" android:elevation="7.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/darkthemecolor" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pick up from" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/imageView3" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/newpick" android:tint="@color/darkthemecolor" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Tell us the address from  where" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="we will pick up the items." />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/chooseaddress_ll_drop" android:background="@drawable/pick_drop_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" android:layout_weight="1.0" android:elevation="7.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/darkthemecolor" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drop at" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/imageView2" android:layout_width="90.0dip" android:layout_height="90.0dip" android:src="@drawable/newdrop" android:tint="@color/darkthemecolor" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select the collection point where" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="you would drop the items" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

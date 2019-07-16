@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="right" android:id="@id/rightcell_relativelayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-1.5dip" android:layout_marginBottom="1.0dip" android:src="@drawable/right_chat_curve" android:layout_toRightOf="@id/LinearContainerRightchat" android:layout_alignParentBottom="true" />
+                    <LinearLayout android:layout_gravity="center|right" android:id="@id/LinearContainerRightchat" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/chatmsg" android:gravity="left" android:id="@id/rightcell_lbl_message" android:background="@drawable/msgleftcell" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250.0dip" android:minWidth="200.0dip" android:text="MessageMessageMessageMessageMessageMessageMessageMessageMessageMessage" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip">
+            <TextView android:textSize="@dimen/chatstatus" android:textColor="@color/colorchatdate" android:id="@id/rightcell_lbl_status" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Recevied:" />
+            <TextView android:textSize="@dimen/chatdate" android:textColor="@color/colorchatdate" android:id="@id/rightcell_lbl_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2015-11-02 12:12 AM" />
+            <LinearLayout android:gravity="bottom|center|right" android:orientation="vertical" android:id="@id/ll_errormsg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip">
+                <ImageView android:id="@id/rightcell_img_sendmark" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/error" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

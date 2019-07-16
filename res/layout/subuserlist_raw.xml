@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/li_subuser" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardUseCompatPadding="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                        <LinearLayout android:id="@id/li_subusername" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/themeColor" android:id="@id/tv_subusername" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@id/li_invation" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/panding" android:id="@id/tv_inetations" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending  Invitation" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                        <LinearLayout android:id="@id/li_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:background="@drawable/phone_subuser" android:layout_width="15.0dip" android:layout_height="15.0dip" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/colorgray" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile Number" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:background="@drawable/arrow_subuser" android:layout_width="15.0dip" android:layout_height="15.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:layout_gravity="center" android:id="@id/imageView" android:background="@drawable/email_subuser" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginTop="2.0dip" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/colorgray" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:id="@id/li_delete" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:background="@drawable/delete_subuser" android:layout_width="15.0dip" android:layout_height="15.0dip" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/panding" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

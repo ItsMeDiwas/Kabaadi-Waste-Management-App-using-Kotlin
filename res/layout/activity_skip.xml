@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/app_bar_skip" />
+    <android.support.design.widget.NavigationView android:layout_gravity="start" android:id="@id/nav_view" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:theme="@style/NavigationDrawerStyle">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TableLayout android:id="@id/li_tablayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1">
+                <LinearLayout android:orientation="vertical" android:id="@id/li_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:id="@id/li_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/drawer_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <imagedownload.CircleImageView android:layout_gravity="center" android:id="@id/img_profile" android:layout_width="78.0dip" android:layout_height="78.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/profile" />
+                            <LinearLayout android:id="@id/li_name" android:background="@color/transparentblack" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/white" android:id="@id/tv_name" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="My Post" />
+                            </LinearLayout>
+                            <LinearLayout android:id="@id/li_number" android:background="@color/transparentblack" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/lightGrey" android:id="@id/tv_number" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Number" />
+                            </LinearLayout>
+                            <LinearLayout android:id="@id/li_gmail" android:background="@color/transparentblack" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/lightGrey" android:id="@id/tv_email" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="gmail" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_post" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/my_post" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_mypost" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="My Post" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_postcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_profile" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/my_profile" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_myprofile" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="My Profile" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_vouchers" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/voucher" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_my_voucher" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="My Vouchers" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_redeem_voucher" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/voucher" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_redeem_voucher" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="Redeem Vouchers" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_subprofile" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/sub_profile" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_sub_profile" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="Sub Profile" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_addpost" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/addpost" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_addpost" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="Add Post" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_saperater" android:background="@color/placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_how_it_works" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/how_it_works" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_how_it_works" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="How it works?" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_aboutUs" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/aboutus" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_aboutus" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="About Us" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_conditions" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/terms_and_condition" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_condition" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="@string/accept_terms_condition" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_FAQ" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/faq" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_FAQ" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="FAQ" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/support" />
+                        <Spinner android:textSize="@dimen/Font_Medium_size" android:gravity="center_vertical" android:id="@id/support_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_logout" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/signout" />
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/drawer_font_color" android:gravity="center_vertical" android:id="@id/tv_logout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip" android:text="Logout" android:layout_weight="1.0" />
+                        <TextView.OpenSansRegular android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableLayout>
+        </ScrollView>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

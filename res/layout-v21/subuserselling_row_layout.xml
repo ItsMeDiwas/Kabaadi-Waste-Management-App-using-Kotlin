@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/activity_item_detail" android:background="@color/cardviewbgcolor" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:id="@id/card_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:elevation="2.5dip" app:cardUseCompatPadding="true" app:contentPadding="0.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="5.0">
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="140.0dip" android:layout_weight="2.0">
+                <com.daimajia.slider.library.SliderLayout android:id="@id/slider" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="7.0dip" />
+            </LinearLayout>
+            <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="5.0dip">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Post Id: " />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/detail_description" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="sdfasfdfdfasfddfggghfhhhfhfhfghfghdf   " android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_small_size" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Products: " android:singleLine="true" />
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_small_size" android:gravity="center" android:layout_gravity="center" android:id="@id/txt_product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:text="10" android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_partion1" android:background="#ffd9d9d9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/li_asssign_to_subuser" android:paddingLeft="5.0dip" android:paddingTop="4.0dip" android:paddingRight="5.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <LinearLayout android:id="@id/li_assignto" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <TextView.OpenSansRegular android:textSize="@dimen/text_size_small" android:textColor="@color/drawer_font_color" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Assign to: " />
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <TextView.OpenSansRegular android:textSize="@dimen/text_size_small" android:textColor="@color/drawer_font_color" android:id="@id/tv_assignto" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="sdfasfa dfasdf gvbffbhgfhghbgfhbgfbh" android:singleLine="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:id="@id/li_subuser" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Assign to sub user" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/rightarrow_subuser" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_partation2" android:background="#ffd2d2d2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/li_viewhistory" android:paddingLeft="5.0dip" android:paddingTop="4.0dip" android:paddingRight="5.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/history" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView.OpenSansRegular android:textSize="@dimen/text_size_small" android:textColor="@color/drawer_font_color" android:id="@id/tv_viewhistory" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="View History" android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_partationa" android:background="@color/newpartation" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:paddingLeft="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:paddingLeft="5.0dip" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <TextView.OpenSansRegular android:textSize="@dimen/text_size_small" android:textColor="@android:color/holo_red_dark" android:id="@id/txt_quotation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Waiting for quotation" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/li_viewmore" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <ImageView android:layout_width="23.0dip" android:layout_height="23.0dip" android:src="@drawable/threedot" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/for_assigned" android:background="@color/transparentblack" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardUseCompatPadding="true" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

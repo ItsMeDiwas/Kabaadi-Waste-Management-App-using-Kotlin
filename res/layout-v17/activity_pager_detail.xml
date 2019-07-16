@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/colorblack" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.e_waste.HackyViewPager android:id="@id/imagePager" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_headerpager" android:background="@color/colortrans" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/pager_btn_back" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@android:drawable/ic_delete" android:tint="@color/white" />
+        <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/colorwhite" android:gravity="center" android:id="@id/custom_pager_titleCount" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" android:textAlignment="center" />
+        <ImageView android:id="@id/custom_pager_btnShare" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@android:drawable/ic_menu_share" android:tint="@android:color/white" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_footerpager" android:background="@color/colortrans" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_alignParentBottom="true">
+        <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/colorwhite" android:id="@id/custom_pager_lblCount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="fdgf" />
+        <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/colorgray" android:id="@id/custom_pager_lbl_Carname" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="asdadsd" />
+    </LinearLayout>
+</RelativeLayout>

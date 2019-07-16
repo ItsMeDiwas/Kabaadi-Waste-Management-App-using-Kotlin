@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_size" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/img_back" android:background="?android:selectableItemBackground" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="My Profile" android:textAlignment="center" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/pick_address_ll_address" android:background="?android:selectableItemBackground" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:id="@id/img_add" android:layout_width="22.0dip" android:layout_height="22.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.TabLayout android:id="@id/tabs" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="#ff0ac8c8" app:tabIndicatorHeight="4.0dip" app:tabBackground="@drawable/tab_color_selector" app:tabMode="fixed" app:tabGravity="fill" app:tabTextColor="@color/white" app:tabSelectedTextColor="@color/white" />
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_ecsvouchr_webview" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_size" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/li_back" android:background="?android:selectableItemBackground" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:id="@id/img_back" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="ECS Voucher" android:textAlignment="center" />
+                </LinearLayout>
+                <ImageView android:layout_width="45.0dip" android:layout_height="45.0dip" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/li_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <WebView android:id="@id/ecsvoucher_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity__subuserlistforassign" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentInsetStart="0.0dip" android:contentInsetEnd="0.0dip" android:contentInsetLeft="0.0dip" android:contentInsetRight="0.0dip" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/btn_back" android:background="?android:selectableItemBackground" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:id="@id/img_back" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sub Users" android:textAlignment="center" />
+                </LinearLayout>
+                <ImageView android:layout_width="45.0dip" android:layout_height="45.0dip" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/li_swiperrefreshlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v7.widget.RecyclerView android:id="@id/recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_nosubuser" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/no_address" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nosubuser" android:tint="@color/darkthemecolor" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/darkthemecolor" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No Sub User Yet!" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/btn_done" android:background="@color/themeColor" android:paddingLeft="30.0dip" android:paddingTop="7.0dip" android:paddingRight="30.0dip" android:paddingBottom="7.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="Done" />
+    </LinearLayout>
+</LinearLayout>

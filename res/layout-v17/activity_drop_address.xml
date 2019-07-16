@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_sign_in" android:background="@color/cardviewbgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_size" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/img_back" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Drop Address" android:textAlignment="center" />
+                </LinearLayout>
+                <ImageView android:layout_width="45.0dip" android:layout_height="45.0dip" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/image_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <fr.ganfra.materialspinner.MaterialSpinner android:id="@id/dropaddress_sp_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" app:ms_baseColor="@color/placeholdercolor" app:ms_hint="Select City" app:ms_hintColor="@color/placeholdercolor" app:ms_floatingLabelColor="@color/placeholdercolor" app:ms_typeface="fonts/open_sans_regular.ttf" app:ms_arrowColor="@color/black" app:ms_enableErrorLabel="false" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" />
+                <LinearLayout android:id="@id/address" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="Selected Address" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/dropAddress" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:id="@id/selected_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:id="@id/selected_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:id="@id/selected_contactno" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true">
+                        <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/dropaddress_tv_done" android:background="@color/themeColor" android:paddingLeft="30.0dip" android:paddingTop="7.0dip" android:paddingRight="30.0dip" android:paddingBottom="7.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

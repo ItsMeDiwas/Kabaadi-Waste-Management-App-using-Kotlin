@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include" layout="@layout/toolbar_conversation" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_header" android:background="@color/colorwhite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/include">
+        <View android:background="@drawable/shadowlineblack" android:layout_width="fill_parent" android:layout_height="@dimen/shadowlineblacksizeEdit" />
+    </LinearLayout>
+    <ScrollView android:id="@id/convesation_scrlview" android:background="@color/colorwhite" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ll_footer" android:layout_below="@id/ll_header">
+        <LinearLayout android:orientation="vertical" android:id="@id/containerLinear" android:background="@color/colorwhite" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" />
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_footer" android:background="@color/colorpanel" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/colorpanel" android:paddingLeft="0.0dip" android:paddingTop="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:layout_gravity="center|left" android:id="@id/li_addAttachment" android:background="@color/colorpanel" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+                <ImageView android:layout_gravity="left" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/chat_attachment" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+                <EditText android:textSize="15.0sp" android:layout_gravity="center|left" android:id="@id/conversation_txt_message" android:background="@drawable/textarea_circle" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Write here..." android:inputType="textMultiLine|textShortMessage" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/white" android:gravity="center" android:id="@id/conversation_btnSend" android:background="@drawable/send_button_circle" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Send" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/colorpanel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:gravity="center|left" android:id="@id/ll_addphotos" android:background="@color/colorwhite" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="left" android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chatcamera" />
+            <TextView android:textSize="@dimen/Font_Medium_size" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="Add Photos" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

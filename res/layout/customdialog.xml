@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip">
+        <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/black" android:id="@id/txt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/txt_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+        <TextView.OpenSansSemiBold android:textColor="@color/themeColor" android:id="@id/txt_dismmiss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DISMISS" />
+    </LinearLayout>
+</LinearLayout>

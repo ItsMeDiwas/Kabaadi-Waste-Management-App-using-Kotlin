@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" app:cardUseCompatPadding="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/noCurrentLocation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/location_marker" />
+            <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/black" android:gravity="center" android:id="@id/txt_currentlocationstatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Fetching current location..." />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/viewaddress_raw" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/li_address_details" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_firstline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_secondline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_city" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_state" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/tv_contactno" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegularCheckbox android:id="@id/address_checked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/li_currentLocation" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:id="@id/layout_currentLocation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="(Current Location)" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/layout_currentAddress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                                <TextView.OpenSansRegularCheckbox android:id="@id/check_addCurrentAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                                <TextView.OpenSansRegular android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save this for my address" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

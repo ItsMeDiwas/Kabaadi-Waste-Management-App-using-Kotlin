@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content_activity_post_list_for__edit" android:background="@color/cardviewbgcolor" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/noProduct" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/appbar">
+        <ImageView android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/product_box" />
+        <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No Items added!" />
+        <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Start adding item by tapping on '+' icon" />
+    </LinearLayout>
+    <android.support.v7.widget.CardView android:id="@id/card_add_reward" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" app:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/li_address_reward" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/button">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_pickaddress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/location_green" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/themeColor" android:id="@id/txt_pickordrop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pick Address" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+                    <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/pick_address" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/address_partitation" android:background="@color/newpartation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_reward" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip">
+                        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/reward_green" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/themeColor" android:id="@id/txt_reward1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Reward Type" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+                    <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/cash_on_delivery" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/partition" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_quatedprice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView.OpenSansRegular android:textSize="@dimen/Font_large_size" android:textColor="@color/themeColor" android:id="@id/label_quated_price" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Quated price" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/quated_price" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <RelativeLayout android:id="@id/productList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/noProduct" android:layout_alignParentTop="true">
+        <LinearLayout android:id="@id/llrecycleview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/button">
+            <android.support.v7.widget.RecyclerView android:id="@id/itemdetails_recycleview" android:background="@color/cardviewbgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true">
+                <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/white" android:id="@id/btn_save" android:background="@color/themeColor" android:paddingLeft="30.0dip" android:paddingTop="7.0dip" android:paddingRight="30.0dip" android:paddingBottom="7.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/li_reward_pickdrop" android:background="@color/pickdropbg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/li_pickupdrop" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip">
+                            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/location_white" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Pick up / Drop" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:background="@color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/li_reward" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip">
+                            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/reward_white" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/white" android:gravity="center" android:id="@id/openSansRegular" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Reward" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

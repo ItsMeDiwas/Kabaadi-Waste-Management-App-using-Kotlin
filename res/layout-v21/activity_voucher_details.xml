@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_voucher_details" android:background="@color/border" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:id="@id/toolbar" android:background="@color/themeColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_size" android:contentInsetStart="0.0dip" android:contentInsetEnd="0.0dip" android:contentInsetLeft="0.0dip" android:contentInsetRight="0.0dip" app:contentInsetStart="0.0dip" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/img_back" android:layout_width="45.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/back_arrow" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView.OpenSansSemiBold android:textSize="@dimen/text_size_med" android:textColor="@color/hintTextColor" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Voucher Title" android:textAlignment="center" />
+                </LinearLayout>
+                <ImageView android:layout_width="45.0dip" android:layout_height="45.0dip" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/editprofile_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+        <LinearLayout android:gravity="center" android:padding="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <imagedownload.RoundedImageView android:id="@id/voucher_image" android:padding="5.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/no_rewards" android:tint="@color/gray" />
+        </LinearLayout>
+        <LinearLayout android:background="@color/placeholder" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:background="@color/border" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip">
+            <TextView.OpenSansRegular android:textSize="@dimen/text_size_med" android:textColor="@color/colorPrimaryDark" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Voucher Price " android:layout_weight="1.0" />
+            <TextView.OpenSansRegular android:textSize="@dimen/text_size_med" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Rs. " />
+            <TextView.OpenSansRegular android:textSize="@dimen/text_size_med" android:textColor="@color/black" android:id="@id/voucher_details_price" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="5000" />
+        </LinearLayout>
+        <LinearLayout android:background="@color/placeholder" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/voucher_details_active" android:background="@color/white" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Scan below QR Code to redeem voucher" />
+            <ImageView android:id="@id/voucher_qr_code" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="0.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/voucher_details_used" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:layout_weight="1.0">
+            <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/red" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Your voucher has already redeemed." />
+            <LinearLayout android:background="@color/partition" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <TextView.OpenSansRegular android:textSize="@dimen/text_size_large" android:textColor="@color/black" android:gravity="center" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Redeemed Detail" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Mr. Rakesh" />
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="13th November 2016" />
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="322, Satyam Mall" />
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Vastrapur, Ahmedabad" />
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_medium_size" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="380015" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_top" android:checkableBehavior="single">
+        <item android:icon="@mipmap/ic_launcher" android:id="@id/nav_mypost" android:title="My Post" app:actionViewClass="android.widget.TextView" />
+        <item android:id="@id/nav_my_profile" android:title="My Profile" />
+        <item android:id="@id/nav_my_vouchers" android:title="My Vouchers" />
+        <item android:id="@id/nav_sub_profile" android:title="Sub Profile" />
+    </group>
+    <group android:id="@id/menu_bottom" android:checkableBehavior="single">
+        <item android:icon="@mipmap/ic_launcher" android:id="@id/nav_how_it_work" android:title="How it works?" />
+        <item android:id="@id/nav_aboutus" android:title="About Us" />
+        <item android:id="@id/nav_terms" android:title="@string/accept_terms_condition" />
+        <item android:id="@id/nav_faq" android:title="FAQ" />
+        <item android:id="@id/nav_support" android:title="" app:actionLayout="@layout/navigation_support_spinner" />
+    </group>
+</menu>

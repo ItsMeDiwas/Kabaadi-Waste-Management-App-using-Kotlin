@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/activity_selling_post" android:background="@color/colorpanel" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scrollView" android:background="@drawable/image_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:fillViewport="true" android:layout_above="@id/btn_getquote_li">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/image_border" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/li_additemsavedlist" android:background="@drawable/productimage_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+                        <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/add_item" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="?android:selectableItemBackground" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/texthintcolor" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Add item from the saved list" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:id="@id/layout_categoryspinner" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <fr.ganfra.materialspinner.MaterialSpinner android:id="@id/spinner_category" android:layout_width="fill_parent" android:layout_height="wrap_content" app:ms_baseColor="@color/placeholdercolor" app:ms_hint="Select Category" app:ms_hintColor="@color/placeholdercolor" app:ms_floatingLabelColor="@color/placeholdercolor" app:ms_typeface="fonts/open_sans_regular.ttf" app:ms_arrowColor="@color/black" app:ms_enableErrorLabel="false" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/themeColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginRight="25.0dip" android:layout_alignRight="@id/layout_categoryspinner">
+                        <TextView.OpenSansRegular android:id="@id/tv_category_error" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="0.0dip" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:id="@id/layout_subcategoryspinner" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <fr.ganfra.materialspinner.MaterialSpinner android:id="@id/spinner_subcategory" android:layout_width="fill_parent" android:layout_height="wrap_content" app:ms_baseColor="@color/placeholdercolor" app:ms_hint="Select Sub Category" app:ms_hintColor="@color/placeholdercolor" app:ms_floatingLabelColor="@color/placeholdercolor" app:ms_typeface="fonts/open_sans_regular.ttf" app:ms_arrowColor="@color/black" app:ms_enableErrorLabel="false" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/themeColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginRight="25.0dip" android:layout_alignRight="@id/layout_subcategoryspinner">
+                        <TextView.OpenSansRegular android:id="@id/tv_subcatogry_error" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="0.0dip" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/linear_carimage_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgone" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" />
+                                <ProgressBar android:id="@id/progressbarone" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:id="@id/openSansLight" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgone_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgone" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="5.0dip" android:layout_height="100.0dip" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgtwo" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" android:adjustViewBounds="true" android:alpha="0.4" />
+                                <ProgressBar android:id="@id/progressbartwo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgtwo_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgtwo" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="5.0dip" android:layout_height="100.0dip" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgthree" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" android:adjustViewBounds="true" android:alpha="0.4" app:riv_oval="false" />
+                                <ProgressBar android:id="@id/progressbarthree" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgthree_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgthree" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:weightSum="3.0">
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgfour" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" android:adjustViewBounds="true" android:alpha="0.4" app:riv_oval="false" />
+                                <ProgressBar android:id="@id/progressbarfour" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgfour_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgfour" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="5.0dip" android:layout_height="100.0dip" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgfive" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" android:adjustViewBounds="true" android:alpha="0.4" app:riv_oval="false" />
+                                <ProgressBar android:id="@id/progressbarfive" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgfive_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgfive" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="5.0dip" android:layout_height="100.0dip" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <imagedownload.RoundedImageView android:id="@id/screenone_imgsix" android:background="@drawable/productimage_bg" android:padding="0.0dip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/add_product_3x" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:alpha="0.4" android:layout_alignParentStart="true" app:riv_oval="false" />
+                                <TextView.OpenSansLight android:textColor="@color/drawer_font_color" android:gravity="center" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Photo" android:layout_alignParentBottom="true" />
+                                <ImageButton android:id="@id/screenone_imgsix_cancel" android:background="@color/colortrans" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@android:drawable/ic_delete" android:layout_alignRight="@id/screenone_imgsix" />
+                                <ProgressBar android:id="@id/progressbarsix" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip">
+                    <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:id="@id/layout_productdescription" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <EditText.OpenSansEditTextRegular android:textSize="@dimen/Font_Medium_size" android:textColorHint="@color/placeholdercolor" android:id="@id/edt_product_description" android:background="@color/transparent" android:paddingTop="8.0dip" android:nextFocusDown="@id/tv_quantity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="5.0dip" android:hint="Product Description" android:inputType="textPersonName|textCapSentences" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout android:background="@color/placeholdercolor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="15.0dip" android:weightSum="2.0">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:id="@id/layout_quantity" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <EditText.OpenSansEditTextRegular android:textSize="@dimen/Font_Medium_size" android:textColorHint="@color/placeholdercolor" android:id="@id/tv_quantity" android:background="@color/transparent" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:hint="Quantity" android:inputType="phone|textCapSentences" android:imeOptions="actionDone" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout android:background="@color/placeholdercolor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginRight="5.0dip" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/Font_Medium_size" android:textColor="@color/themeColor" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:text="OR" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_weight="1.0">
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <android.support.design.widget.TextInputLayout android:textColorHint="@color/placeholdercolor" android:id="@id/layout_weight" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <EditText.OpenSansEditTextRegular android:textSize="@dimen/Font_Medium_size" android:textColorHint="@color/placeholdercolor" android:id="@id/edt_weight" android:background="@color/transparent" android:paddingTop="8.0dip" android:nextFocusDown="@id/btn_add" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="5.0dip" android:hint="Weight (Kgs)" android:inputType="phone|textCapSentences" android:imeOptions="actionDone" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout android:background="@color/placeholdercolor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip">
+                    <TextView.OpenSansRegularCheckbox android:id="@id/sellingpost_savepost" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Save this item for reuse" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/image_border" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_pickaddress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/location_green" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/themeColor" android:id="@id/tv_pick" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pick Address" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/pick_address" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/address_partitation" android:background="@color/partition" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_reward" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/reward_green" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/themeColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Reward Type" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+                        <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/black" android:id="@id/cash_on_delivery" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/btn_getquote_li" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/add_reward_li">
+        <TextView.OpenSansSemiBold android:textSize="@dimen/Font_large_size" android:textColor="@color/white" android:id="@id/btn_add" android:background="@color/themeColor" android:paddingLeft="30.0dip" android:paddingTop="7.0dip" android:paddingRight="30.0dip" android:paddingBottom="7.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Get Quote" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/add_reward_li" android:background="@color/pickdropbg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/btn_pickup_drop" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/location_white" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/openSansRegular2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Pick up / Drop" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:background="@color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/btn_reward" android:background="?android:selectableItemBackground" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/reward_white" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView.OpenSansRegular android:textSize="@dimen/Font_Medium_size" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Reward" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip">
+        <android.support.design.widget.FloatingActionButton android:id="@id/fab" android:background="?android:selectableItemBackground" android:padding="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/add_sign_floating" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:elevation="4.0dip" app:fabSize="normal" app:backgroundTint="@color/float_button" />
+    </RelativeLayout>
+</RelativeLayout>
